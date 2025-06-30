@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - ByteBareng</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Orbitron', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-900 px-6 py-4 flex justify-between items-center shadow-xl">
+    <div class="text-2xl font-bold text-cyan-400">Laman Admin BybitBareng</div>
+    <a href="../index.html" class="hover:text-cyan-400">← Kembali ke Beranda</a>
+  </nav>
+
+  <!-- Admin Dashboard -->
+  <section class="py-16 px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Daftar Pendaftar UMKM</h2>
+    <div class="overflow-x-auto">
+      <table class="table-auto w-full text-left text-white border border-gray-700">
+        <thead class="bg-gray-800">
+          <tr>
+            <th class="px-4 py-2">No</th>
+            <th class="px-4 py-2">Nama UMKM</th>
+            <th class="px-4 py-2">Kategori</th>
+            <th class="px-4 py-2">WhatsApp</th>
+            <th class="px-4 py-2">Alamat</th>
+            <th class="px-4 py-2">Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="tabelData" class="bg-gray-900">
+          <!-- Diisi lewat JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script>
+    const tabel = document.getElementById("tabelData");
+    const dataUMKM = JSON.parse(localStorage.getItem("dataUMKM")) || [];
+
+    function tampilkanData() {
+      tabel.innerHTML = "";
+      dataUMKM.forEach((item, index) => {
+        const baris = document.createElement("tr");
+        baris.innerHTML = `
+          <td class="border px-4 py-2">${index + 1}</td>
+          <td class="border px-4 py-2">${item.nama}</td>
+          <td class="border px-4 py-2">${item.kategori}</td>
+          <td class="border px-4 py-2"><a href="https://wa.me/${item.wa}" class="text-cyan-400" target="_blank">${item.wa}</a></td>
+          <td class="border px-4 py-2">${item.alamat}</td>
+          <td class="border px-4 py-2">
+            <button onclick="hapusData(${index})" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded">Hapus</button>
+          </td>
+        `;
+        tabel.appendChild(baris);
+      });
+    }
+
+    function hapusData(index) {
+      if (confirm("Yakin ingin menghapus data ini?")) {
+        dataUMKM.splice(index, 1);
+        localStorage.setItem("dataUMKM", JSON.stringify(dataUMKM));
+        tampilkanData();
+      }
+    }
+
+    tampilkanData();
+  </script>
+</body>
+</html>

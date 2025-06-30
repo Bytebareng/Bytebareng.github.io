@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteBareng.ID - Bantu UMKM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/glow.css" />
+  <link rel="stylesheet" href="../style/main.css"/>
+<body class="text-white pt-24">
+
+<!-- INI NAVBAR FIXED DAN RESPONSIF -->
+<nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
+  <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
+
+    <!-- Logo Kiri -->
+    <a href="../index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
+
+    <!-- Tombol Hamburger -->
+    <button data-collapse-toggle="navbar-menu" type="button"
+      class="ml-3 inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
+      aria-controls="navbar-menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu Navbar Kanan -->
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
+      <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
+        <li><a href="../index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
+        <li><a href="tentang.html" class="block py-2 px-4 hover:text-cyan-400">Tentang</a></li>
+        <li><a href="layanan.html" class="block py-2 px-4 hover:text-cyan-400">Layanan</a></li>
+        <li><a href="galeri.html" class="block py-2 px-4 hover:text-cyan-400">Galeri</a></li>
+        <li><a href="kontak.html" class="block py-2 px-4 hover:text-cyan-400">Kontak</a></li>
+        <li><a href="testimoni.html" class="block py-2 px-4 hover:text-cyan-400">Testimoni</a></li>
+        <li><a href="daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
+        <li><a href="login.html" class="block py-2 px-4 hover:text-cyan-400">Login</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+  <!-- SPACER NAVBAR -->
+  <div class="h-24 md:h-32"></div>
+
+  <!-- Tentang Kami -->
+<section class="py-20 px-6 bg-gradient-to-b from-black via-gray-900 to-black text-center" data-aos="fade-up">
+  <h1 class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-fuchsia-400 animate-pulse">
+    Tentang ByteBareng
+  </h1>
+  <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+    ByteBareng adalah inisiatif kreatif digital yang berfokus membantu UMKM masuk ke era digital dengan mudah. Kami percaya bahwa setiap pelaku usaha berhak memiliki website yang profesional, cepat, dan menarik tanpa perlu pusing teknis.
+  </p>
+
+  <div class="h-20 md:h-24"></div>
+
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
+    <!-- Visi -->
+    <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-purple-800/30 via-black/40 to-cyan-900/30 border border-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.15)] hover:shadow-purple-500/40 hover:scale-[1.03] transition-all duration-500">
+      <h2 class="text-2xl font-semibold mb-2 text-purple-300">Visi</h2>
+      <p class="text-gray-300 text-left">Menjadi pelopor transformasi digital UMKM Indonesia dengan solusi teknologi yang mudah, cepat, dan terpercaya.</p>
+    </div>
+
+    <!-- Misi -->
+    <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-cyan-800/30 via-black/40 to-purple-900/30 border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.15)] hover:shadow-cyan-500/40 hover:scale-[1.03] transition-all duration-500">
+      <h2 class="text-2xl font-semibold mb-2 text-cyan-300">Misi</h2>
+      <ul class="list-disc list-inside text-left text-gray-300 space-y-2">
+        <li>Membuat website UMKM dengan tampilan profesional</li>
+        <li>Memberi pelatihan dasar digital marketing</li>
+        <li>Memberikan layanan cepat, ramah, dan transparan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Spacer -->
+<div class="h-24 md:h-32"></div>
+
+<!-- Tim Kami -->
+<section class="py-16 px-6 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-center">
+  <h2 class="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-fuchsia-400 animate-pulse" data-aos="fade-up">
+    Tim Kami
+  </h2>
+
+  <div class="flex flex-col md:flex-row justify-center gap-12" data-aos="fade-up" data-aos-delay="200">
+    <!-- Card Tim 1 -->
+    <div class="rounded-[2rem] bg-black/30 p-6 shadow-[0_0_30px_rgba(34,211,238,0.1)] border border-cyan-400/20 backdrop-blur-lg hover:scale-105 transition-all duration-500">
+      <img src="../assets/images/Azril.jpg" alt="Foto Azril Alklas" class="mx-auto w-32 h-32 rounded-full border-4 border-cyan-500 shadow-lg" />
+      <h3 class="mt-4 text-xl font-semibold text-white">Azril Alklas</h3>
+      <p class="text-cyan-300">Co-Founder & Developer</p>
+    </div>
+
+    <!-- Card Tim 2 -->
+    <div class="rounded-[2rem] bg-black/30 p-6 shadow-[0_0_30px_rgba(232,121,249,0.1)] border border-fuchsia-400/20 backdrop-blur-lg hover:scale-105 transition-all duration-500">
+      <img src="../assets/images/Naufal.jpg" alt="Foto Naufal Rizky Aditya" class="mx-auto w-32 h-32 rounded-full border-4 border-fuchsia-500 shadow-lg" />
+      <h3 class="mt-4 text-xl font-semibold text-white">Naufal Rizky Aditya</h3>
+      <p class="text-fuchsia-300">Founder & Designer</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <div class="h-24 md:h-32"></div>
+  <footer class="bg-gray-900 text-center text-gray-400 py-6">
+    <p>&copy; 2025 ByteBareng. Dibangun oleh tim penuh semangat.</p>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

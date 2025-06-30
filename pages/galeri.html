@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteBareng.ID - Bantu UMKM</title>
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/glow.css" />
+
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-image: url('../assets/images/ungu.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="text-white pt-24">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
+    <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
+      <button data-collapse-toggle="navbar-menu" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
+        aria-controls="navbar-menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
+        <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
+          <li><a href="../index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
+          <li><a href="tentang.html" class="block py-2 px-4 hover:text-cyan-400">Tentang</a></li>
+          <li><a href="layanan.html" class="block py-2 px-4 hover:text-cyan-400">Layanan</a></li>
+          <li><a href="galeri.html" class="block py-2 px-4 hover:text-cyan-400">Galeri</a></li>
+          <li><a href="kontak.html" class="block py-2 px-4 hover:text-cyan-400">Kontak</a></li>
+          <li><a href="testimoni.html" class="block py-2 px-4 hover:text-cyan-400">Testimoni</a></li>
+          <li><a href="daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
+          <li><a href="login.html" class="block py-2 px-4 hover:text-cyan-400">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Konten Utama -->
+  <main>
+    <!-- Spacer Top -->
+    <div class="h-4 md:h-32"></div>
+
+    <!-- Galeri -->
+    <section class="py-20 px-6 bg-black text-center">
+      <h1 class="text-4xl font-bold mb-8" data-aos="fade-up">Galeri UMKM</h1>
+      <p class="max-w-xl mx-auto text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+        Kumpulan momen dan produk UMKM yang telah kami bantu digitalisasikan.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" data-aos="zoom-in-up" data-aos-delay="200">
+        <a href="../assets/images/UMKM-1.jpeg" class="glightbox" title="UMKM 1">
+          <img src="../assets/images/UMKM-1.jpeg" alt="UMKM 1" class="rounded-lg shadow-lg w-full" />
+        </a>
+        <a href="../assets/images/UMKM-2.jpeg" class="glightbox" title="UMKM 2">
+          <img src="../assets/images/UMKM-2.jpeg" alt="UMKM 2" class="rounded-lg shadow-lg w-full" />
+        </a>
+        <a href="../assets/images/UMKM-3.jpeg" class="glightbox" title="UMKM 3">
+          <img src="../assets/images/UMKM-3.jpeg" alt="UMKM 3" class="rounded-lg shadow-lg w-full" />
+        </a>
+        <a href="../assets/images/UMKM-4.jpeg" class="glightbox" title="UMKM 4">
+          <img src="../assets/images/UMKM-4.jpeg" alt="UMKM 4" class="rounded-lg shadow-lg w-full" />
+        </a>
+        <a href="../assets/images/UMKM-5.jpeg" class="glightbox" title="UMKM 5">
+          <img src="../assets/images/UMKM-5.jpeg" alt="UMKM 5" class="rounded-lg shadow-lg w-full" />
+        </a>
+        <a href="../assets/images/UMKM-6.jpeg" class="glightbox" title="UMKM 6">
+          <img src="../assets/images/UMKM-6.jpeg" alt="UMKM 6" class="rounded-lg shadow-lg w-full" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Spacer Bottom agar footer tetap di bawah -->
+    <div class="h-48 md:h-40"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center text-gray-400 py-6">
+    <p>&copy; 2025 ByteBareng. Galeri digitalisasi UMKM Indonesia.</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
+
+</body>
+</html>

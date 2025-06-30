@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteBareng - Futuristic UMKM</title>
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/glow.css" />
+
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-image: url('../assets/images/ungu.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
+<body class="text-white pt-24">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
+    <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
+      <button data-collapse-toggle="navbar-menu" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
+        aria-controls="navbar-menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
+        <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
+          <li><a href="../index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
+          <li><a href="tentang.html" class="block py-2 px-4 hover:text-cyan-400">Tentang</a></li>
+          <li><a href="layanan.html" class="block py-2 px-4 hover:text-cyan-400">Layanan</a></li>
+          <li><a href="galeri.html" class="block py-2 px-4 hover:text-cyan-400">Galeri</a></li>
+          <li><a href="kontak.html" class="block py-2 px-4 hover:text-cyan-400">Kontak</a></li>
+          <li><a href="testimoni.html" class="block py-2 px-4 hover:text-cyan-400">Testimoni</a></li>
+          <li><a href="daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
+          <li><a href="login.html" class="block py-2 px-4 hover:text-cyan-400">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Spacer -->
+    <div class="h-14 md:h-32"></div>
+
+    <!-- Form Section -->
+    <section class="py-20 px-6 bg-black bg-opacity-80 text-center">
+      <div data-aos="fade-up">
+        <h1 class="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
+          Hubungi Kami <span class="animate-bounce text-3xl">💌</span>
+        </h1>
+        <p class="max-w-xl mx-auto text-gray-300 mb-10">
+          Kirim pertanyaan, masukan, atau konsultasi gratis melalui form berikut:
+        </p>
+      </div>
+
+      <form id="contactForm" class="max-w-xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg space-y-4"
+        data-aos="zoom-in" data-aos-delay="200">
+        <div>
+          <label class="block text-left mb-1">Nama</label>
+          <input type="text" name="nama" required class="w-full px-4 py-2 rounded bg-gray-900 text-white placeholder-gray-400" placeholder="Nama Anda" />
+        </div>
+        <div>
+          <label class="block text-left mb-1">Email</label>
+          <input type="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-900 text-white placeholder-gray-400" placeholder="Email aktif" />
+        </div>
+        <div>
+          <label class="block text-left mb-1">Pesan</label>
+          <textarea name="pesan" rows="4" required class="w-full px-4 py-2 rounded bg-gray-900 text-white placeholder-gray-400" placeholder="Tulis pesan Anda..."></textarea>
+        </div>
+        <div>
+          <button type="submit"
+            class="bg-cyan-500 hover:bg-cyan-600 hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300 ease-in-out text-white font-semibold py-2 px-6 rounded-full animate__animated hover:animate__headShake">
+            Kirim Pesan
+          </button>
+        </div>
+      </form>
+
+      <!-- Modal dummy -->
+      <div id="successModal"
+        class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 hidden items-center justify-center z-50">
+        <div class="bg-white text-black rounded-lg shadow-lg p-8 max-w-md text-center">
+          <h2 class="text-xl font-bold mb-4">🎉 Pesan Terkirim!</h2>
+          <p class="mb-6">Terima kasih telah menghubungi ByteBareng. Kami akan segera membalas pesan kamu ya!</p>
+          <button onclick="closeModal()"
+            class="bg-cyan-500 text-white py-2 px-4 rounded-full hover:bg-cyan-600 transition">Tutup</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-24 md:h-32"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center text-gray-400 py-6">
+    <p>&copy; 2025 ByteBareng. Kami siap membantu Anda.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const modal = document.getElementById('successModal');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent actual submission
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      form.reset();
+    });
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+</body>
+</html>

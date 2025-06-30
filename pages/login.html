@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteBareng - Login UMKM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/main.css" />
+<body class="text-white pt-24 flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+<nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
+  <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="../index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
+    
+    <!-- Tombol Hamburger (mobile only) -->
+    <button data-collapse-toggle="navbar-menu" type="button"
+      class="ml-3 inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
+      aria-controls="navbar-menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
+      <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
+        <li><a href="../index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
+        <li><a href="daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="h-24 md:h-32"></div>
+
+<!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Login Section -->
+    <section class="py-20 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-2 typing-text" id="sambutan">Silahkan login dulu yaa 😊</h2>
+      <p class="text-sm text-gray-300 mb-6">Gunakan akun yang sudah terdaftar.</p>
+
+      <form id="loginForm" class="max-w-md mx-auto p-6 card-login" data-aos="zoom-in">
+        <input id="username" type="text" placeholder="Username"
+          class="w-full mb-4 px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" required />
+
+        <div class="relative mb-4">
+          <input id="password" type="password"
+            class="w-full px-4 py-2 rounded bg-gray-700 text-white pr-14 focus:outline-none" required />
+          <button type="button" id="togglePassword"
+            class="absolute top-2 right-2.5 text-gray-400 hover:text-white hidden">👁️</button>
+        </div>
+
+        <div class="text-right mb-4">
+          <button type="button" id="forgotBtn" class="text-sm text-cyan-400 hover:underline">Lupa Password?</button>
+        </div>
+
+        <div
+          class="transition transform hover:scale-105 bg-cyan-500 hover:bg-cyan-600 rounded-full shadow-md hover:shadow-cyan-400/50">
+          <button type="submit"
+            class="w-full py-2 px-4 rounded-full text-white font-semibold focus:outline-none">Login</button>
+        </div>
+
+        <p id="errorMsg" class="text-red-500 mt-4 hidden">Username atau password salah!</p>
+        <div id="loadingSpinner" class="hidden mt-4 text-cyan-400 animate-pulse">🔄 Memproses login...</div>
+      </form>
+    </section>
+
+    <!-- Modal Lupa Password -->
+    <div id="resetModal" class="fixed inset-0 bg-black bg-opacity-60 hidden justify-center items-center z-50">
+      <div class="bg-gray-800 p-6 rounded-lg max-w-sm w-full">
+        <h3 class="text-lg font-semibold mb-4">Reset Password</h3>
+        <input type="email" id="resetEmail" placeholder="Masukkan email Anda"
+          class="w-full px-4 py-2 rounded mb-4 bg-gray-700 text-white" required />
+        <div class="flex justify-end space-x-2">
+          <button onclick="closeModal()" class="text-gray-300 hover:underline">Batal</button>
+          <button onclick="sendReset()"
+            class="bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded text-white font-medium">Kirim</button>
+        </div>
+        <p id="resetSuccess" class="text-green-400 text-sm mt-4 hidden">Email reset berhasil dikirim ✅</p>
+      </div>
+    </div>
+
+    <div class="h-48 md:h-32"></div>
+  </main>
+
+  <!-- Footer Selalu di Bawah -->
+  <footer class="bg-gray-900 text-center text-gray-400 py-6">
+    <p>&copy; 2025 ByteBareng. Dibuat oleh Azril & Naufal.</p>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script>
+    AOS.init();
+
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("password");
+
+    passwordInput.addEventListener("input", () => {
+      togglePassword.classList.toggle("hidden", passwordInput.value === "");
+    });
+
+    togglePassword.addEventListener("click", function () {
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    });
+
+    // Efek Ketik Otomatis
+    const text = "Silahkan login dulu yaa 😊";
+    let i = 0;
+    const target = document.getElementById("sambutan");
+    target.innerHTML = "";
+    function typing() {
+      if (i < text.length) {
+        target.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 60);
+      }
+    }
+    typing();
+
+    // Login Logic
+    const form = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("errorMsg");
+    const spinner = document.getElementById("loadingSpinner");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = passwordInput.value;
+
+      spinner.classList.remove("hidden");
+      errorMsg.classList.add("hidden");
+
+      setTimeout(() => {
+        spinner.classList.add("hidden");
+
+        if (username === "admin" && password === "admin123") {
+          alert("Login berhasil! Selamat datang 🎉");
+          window.location.href = "admin.html";
+        } else {
+          errorMsg.classList.remove("hidden");
+          form.classList.add("shake");
+          setTimeout(() => form.classList.remove("shake"), 400);
+        }
+      }, 1000);
+    });
+
+    // Modal Lupa Password
+    document.getElementById("forgotBtn").addEventListener("click", () => {
+      document.getElementById("resetModal").classList.remove("hidden");
+    });
+
+    function closeModal() {
+      document.getElementById("resetModal").classList.add("hidden");
+      document.getElementById("resetSuccess").classList.add("hidden");
+    }
+
+    function sendReset() {
+      const email = document.getElementById("resetEmail").value;
+      if (email) {
+        document.getElementById("resetSuccess").classList.remove("hidden");
+        setTimeout(closeModal, 2000);
+      }
+    }
+  </script>
+</body>
+</html>

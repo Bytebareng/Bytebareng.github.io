@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteBareng.ID - Bantu UMKM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/glow.css" />
+  <link rel="stylesheet" href="../style/main.css"/>
+</head>
+<body class="text-white pt-24">
+
+<!-- INI NAVBAR FIXED DAN RESPONSIF -->
+<nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
+  <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
+
+    <!-- Logo Kiri -->
+    <a href="index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
+
+    <!-- Tombol Hamburger -->
+    <button data-collapse-toggle="navbar-menu" type="button"
+      class="ml-3 inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
+      aria-controls="navbar-menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu Navbar Kanan -->
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
+      <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
+        <li><a href="index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
+        <li><a href="pages/tentang.html" class="block py-2 px-4 hover:text-cyan-400">Tentang</a></li>
+        <li><a href="pages/layanan.html" class="block py-2 px-4 hover:text-cyan-400">Layanan</a></li>
+        <li><a href="pages/galeri.html" class="block py-2 px-4 hover:text-cyan-400">Galeri</a></li>
+        <li><a href="pages/kontak.html" class="block py-2 px-4 hover:text-cyan-400">Kontak</a></li>
+        <li><a href="pages/testimoni.html" class="block py-2 px-4 hover:text-cyan-400">Testimoni</a></li>
+        <li><a href="pages/daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
+        <li><a href="pages/login.html" class="block py-2 px-4 hover:text-cyan-400">Login</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- CAROUSEL -->
+<div id="carouselExample" class="relative w-full " data-carousel="slide">
+  <div class="relative h-56 overflow-hidden rounded-lg md:h-[32rem]">
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/images/slide1.jpg" class="absolute block w-full h-full object-cover" alt="Slide 1">
+    </div>
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/images/slide2.jpg" class="absolute block w-full h-full object-cover" alt="Slide 2">
+    </div>
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="assets/images/slide3.jpg" class="absolute block w-full h-full object-cover" alt="Slide 3">
+    </div>
+  </div>  
+  <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+    <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+    <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+    <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+  </div>
+</div>
+
+<!-- SPACER -->
+<div class="h-24 md:h-32"></div>
+
+<!-- CONTENT SECTION -->
+<section class="px-4 sm:px-6 max-w-7xl mx-auto text-center text-white" data-aos="fade-up">
+  <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-fuchsia-500 text-transparent">
+    Selamat Datang di ByteBareng
+  </h2>
+  <p class="text-gray-300 mb-2">
+    ByteBareng hadir sebagai solusi digital bagi UMKM yang ingin memiliki
+    <span class="text-cyan-400 font-semibold">website profesional</span> tanpa harus pusing soal teknis.
+  </p>
+  <p class="text-gray-400 italic mb-10">“Website bukan lagi pilihan, tapi kebutuhan.” 💡</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+
+    <!-- Card 1 -->
+    <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-purple-700/30 via-black/40 to-cyan-700/30 border border-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.2)] hover:shadow-purple-500/50 hover:scale-[1.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center justify-center mb-4">
+        <svg class="w-14 h-14 text-cyan-400 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+      </div>
+      <h3 class="text-3xl font-bold text-cyan-400 mb-2 animate-pulse">Coding??</h3>
+      <p class="text-gray-300">Gaperlu tinggal terima beres</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-cyan-700/30 via-black/40 to-purple-700/30 border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:shadow-cyan-500/50 hover:scale-[1.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+      <div class="flex items-center justify-center mb-4">
+        <svg class="w-14 h-14 text-purple-400 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l3 3 7-7 4 4 4-4" />
+        </svg>
+      </div>
+      <h3 class="text-3xl font-bold text-purple-400 mb-2 animate-pulse">100%</h3>
+      <p class="text-gray-300">Website Responsif</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-fuchsia-700/30 via-black/40 to-cyan-700/30 border border-fuchsia-500/30 shadow-[0_0_40px_rgba(232,121,249,0.2)] hover:shadow-fuchsia-500/50 hover:scale-[1.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
+      <div class="flex items-center justify-center mb-4">
+        <svg class="w-14 h-14 text-fuchsia-400 group-hover:scale-110 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+        </svg>
+      </div>
+      <h3 class="text-3xl font-bold text-fuchsia-400 mb-2 animate-pulse">3+ Hari</h3>
+      <p class="text-gray-300">Estimasi Waktu Jadi</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPACER -->
+<div class="h-24 md:h-32"></div>
+
+<!-- HOOK PEMBELI -->
+<section class="bg-gradient-to-b from-purple-950 via-black to-purple-900 py-20 px-6 sm:px-10 text-white text-center" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-fuchsia-400 animate-pulse">
+      Kenapa Harus ByteBareng?
+    </h2>
+    <p class="text-gray-300 text-base sm:text-lg mb-10 leading-relaxed">
+      Kami bukan sekadar pembuat website. Kami adalah partner digital Anda. Didesain elegan, cepat launching, SEO-friendly, dan full support. Mulai dari harga ramah UMKM!
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-purple-800/30 via-black/40 to-cyan-900/30 border border-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.15)] hover:shadow-purple-500/40 hover:scale-[1.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-5xl mb-4">🧠</div>
+        <h3 class="text-lg font-semibold text-purple-300 mb-2">Strategi Pintar</h3>
+        <p class="text-gray-300 text-sm">Kami bantu bangun branding usaha dengan desain yang dipercaya customer kamu.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-cyan-800/30 via-black/40 to-purple-900/30 border border-cyan-500/30 shadow-[0_0_40px_rgba(34,211,238,0.15)] hover:shadow-cyan-500/40 hover:scale-[1.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-5xl mb-4">🛒</div>
+        <h3 class="text-lg font-semibold text-cyan-300 mb-2">Siap Jualan</h3>
+        <p class="text-gray-300 text-sm">Bisa langsung kamu share ke pelanggan. Dukungan katalog & form order.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="rounded-[2.5rem] p-8 backdrop-blur-xl bg-gradient-to-br from-fuchsia-800/30 via-black/40 to-purple-900/30 border border-fuchsia-500/30 shadow-[0_0_40px_rgba(232,121,249,0.15)] hover:shadow-fuchsia-500/40 hover:scale-[1.05] transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-5xl mb-4">💬</div>
+        <h3 class="text-lg font-semibold text-fuchsia-300 mb-2">Bantuan Cepat</h3>
+        <p class="text-gray-300 text-sm">Ada pertanyaan atau revisi? Tenang, tim kami siap bantu kapan pun!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPACER -->
+<div class="h-24 md:h-32"></div>
+
+<!-- SECTION HARGA PAKET -->
+    <section class="px-4 sm:px-6 py-20 max-w-7xl mx-auto text-white text-center" data-aos="fade-up">
+  <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-fuchsia-500 animate-pulse">
+    Paket Website Untuk UMKM
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <!-- Paket Basic -->
+    <div class="card-glow card-basic glow-border" data-aos="zoom-in-up" data-aos-delay="100">
+      <div class="card-badge badge-basic">💡 Cocok Pemula</div>
+      <h3 class="text-xl font-bold text-purple-300 mt-6 mb-2">Basic</h3>
+      <p class="text-4xl font-extrabold text-white mb-4">Rp150rb</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-6 text-left">
+        <li>✓ 1 Halaman Website</li>
+        <li>✓ Mobile Friendly</li>
+        <li>✓ Desain Menarik</li>
+        <li>✓ Domain Gratis .my.id</li>
+        <li>✓ Selesai ± 3 Hari</li>
+      </ul>
+      <a href="pages/daftar.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-xl transition">Pilih Paket</a>
+    </div>
+
+    <!-- Paket Pro -->
+    <div class="card-glow card-pro glow-border" data-aos="zoom-in-up" data-aos-delay="200">
+      <div class="card-badge badge-pro">🔥 Terlaris</div>
+      <h3 class="text-xl font-bold text-cyan-300 mt-6 mb-2">Pro</h3>
+      <p class="text-4xl font-extrabold text-white mb-4">Rp220rb</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-6 text-left">
+        <li>✓ Hingga 3 Halaman</li>
+        <li>✓ Fitur Katalog Produk</li>
+        <li>✓ Form Pemesanan (Google Form)</li>
+        <li>✓ Custom Desain</li>
+        <li>✓ Domain + Hosting Gratis</li>
+      </ul>
+      <a href="pages/daftar.html" class="inline-block bg-purple-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-xl transition">Pilih Paket</a>
+    </div>
+
+    <!-- Paket Premium -->
+    <div class="card-glow card-premium glow-border" data-aos="zoom-in-up" data-aos-delay="300">
+      <div class="card-badge badge-premium">💎 Terbaik</div>
+      <h3 class="text-xl font-bold text-fuchsia-300 mt-6 mb-2">Premium</h3>
+      <p class="text-4xl font-extrabold text-white mb-4">Rp250rb</p>
+      <ul class="text-sm text-gray-300 space-y-2 mb-6 text-left">
+        <li>✓ Unlimited Halaman</li>
+        <li>✓ Dashboard Admin Sederhana</li>
+        <li>✓ Statistik Kunjungan</li>
+        <li>✓ SEO Optimized</li>
+        <li>✓ Support 24/7</li>
+      </ul>
+      <a href="pages/daftar.html" class="inline-block bg-red-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-xl transition">Pilih Paket</a>
+    </div>
+  </div>
+</section>
+
+<!-- SPACER -->
+<div class="h-24 md:h-32"></div>
+
+<!-- CTA -->
+<section class="py-20 bg-gradient-to-r from-cyan-900 to-purple-900 text-white text-center" data-aos="zoom-in">
+  <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Siap Punya Website Sendiri?</h2>
+  <p class="mb-6 text-gray-300">Bergabunglah bersama puluhan UMKM lain yang sudah tampil profesional di internet!</p>
+  <a href="pages/daftar.html" class="bg-purple-600 hover:bg-cyan-600 px-6 py-3 rounded-xl text-white text-lg transition-all">Daftar Sekarang</a>
+</section>
+
+<!-- SPACER -->
+<div class="h-24 md:h-32"></div>
+
+<!-- Footer -->
+<footer class="mt-20 bg-black/60 backdrop-blur-md border-t border-purple-500/20 py-10 px-6 text-sm text-gray-300" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="text-xl font-bold text-cyan-400 mb-2">ByteBareng.id</h3>
+      <p class="text-gray-400 text-xs">Solusi digital untuk UMKM tampil modern & profesional sejak 2024.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-2">Navigasi</h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="index.html" class="hover:text-cyan-400">Beranda</a></li>
+        <li><a href="pages/tentang.html" class="hover:text-cyan-400">Tentang</a></li>
+        <li><a href="pages/layanan.html" class="hover:text-cyan-400">Layanan</a></li>
+        <li><a href="pages/galeri.html" class="hover:text-cyan-400">Galeri</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-2">Bantuan</h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="pages/kontak.html" class="hover:text-cyan-400">Kontak Kami</a></li>
+        <li><a href="pages/testimoni.html" class="hover:text-cyan-400">Testimoni</a></li>
+        <li><a href="pages/login.html" class="hover:text-cyan-400">Login</a></li>
+        <li><a href="pages/daftar.html" class="hover:text-cyan-400">Daftar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-2">Terhubung</h4>
+      <ul class="space-y-1 text-sm">
+        <li><a href="https://instagram.com/bytebareng" class="hover:text-cyan-400" target="_blank">Instagram</a></li>
+        <li><a href="#" class="hover:text-cyan-400">WhatsApp</a></li>
+        <li><a href="#" class="hover:text-cyan-400">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center text-xs text-gray-500 mt-10 border-t border-gray-700/30 pt-4">
+    © 2025 ByteBareng.id - All rights reserved.
+  </div>
+</footer>
+
+  <!-- ALL SCRIPT -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>
