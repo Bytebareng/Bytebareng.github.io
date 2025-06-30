@@ -11,7 +11,9 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style/glow.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style/glow.css" />
 
   <style>
     body {
@@ -31,39 +33,46 @@
 </head>
 <body class="text-white pt-24">
 
-  <!-- Navbar -->
-  <nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
-    <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
-      <a href="../index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
-      <button data-collapse-toggle="navbar-menu" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
-        aria-controls="navbar-menu" aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
-        <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
-          <li><a href="../index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
-          <li><a href="tentang.html" class="block py-2 px-4 hover:text-cyan-400">Tentang</a></li>
-          <li><a href="layanan.html" class="block py-2 px-4 hover:text-cyan-400">Layanan</a></li>
-          <li><a href="galeri.html" class="block py-2 px-4 hover:text-cyan-400">Galeri</a></li>
-          <li><a href="kontak.html" class="block py-2 px-4 hover:text-cyan-400">Kontak</a></li>
-          <li><a href="testimoni.html" class="block py-2 px-4 hover:text-cyan-400">Testimoni</a></li>
-          <li><a href="daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
-          <li><a href="login.html" class="block py-2 px-4 hover:text-cyan-400">Login</a></li>
-        </ul>
-      </div>
+<!-- INI NAVBAR FIXED DAN RESPONSIF -->
+<nav class="bg-gray-900 border-b border-gray-700 fixed w-full z-50 top-0 left-0">
+  <div class="max-w-screen-xl mx-auto px-3 py-4 flex items-center justify-between">
+
+    <!-- Logo Kiri -->
+    <a href="../index.html" class="text-white text-2xl font-bold text-cyan-400">ByteBareng.Id</a>
+
+    <!-- Tombol Hamburger -->
+    <button data-collapse-toggle="navbar-menu" type="button"
+      class="ml-3 inline-flex items-center p-2 w-10 h-10 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none"
+      aria-controls="navbar-menu" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menu Navbar Kanan -->
+    <div class="hidden w-full lg:block lg:w-auto" id="navbar-menu">
+      <ul class="flex flex-col lg:flex-row lg:space-x-6 font-medium mt-4 lg:mt-0 text-white lg:ml-auto">
+        <li><a href="../index.html" class="block py-2 px-4 hover:text-cyan-400">Beranda</a></li>
+        <li><a href="tentang.html" class="block py-2 px-4 hover:text-cyan-400">Tentang</a></li>
+        <li><a href="layanan.html" class="block py-2 px-4 hover:text-cyan-400">Layanan</a></li>
+        <li><a href="galeri.html" class="block py-2 px-4 hover:text-cyan-400">Galeri</a></li>
+        <li><a href="kontak.html" class="block py-2 px-4 hover:text-cyan-400">Kontak</a></li>
+        <li><a href="testimoni.html" class="block py-2 px-4 hover:text-cyan-400">Testimoni</a></li>
+        <li><a href="daftar.html" class="block py-2 px-4 hover:text-cyan-400">Daftar</a></li>
+        <li><a href="login.html" class="block py-2 px-4 hover:text-cyan-400">Login</a></li>
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
 
   <main>
     <!-- Spacer -->
     <div class="h-14 md:h-32"></div>
 
     <!-- Form Section -->
-    <section class="py-20 px-6 bg-black bg-opacity-80 text-center">
+    <section class="py-6 px-6 bg-black bg-opacity-80 text-center">
       <div data-aos="fade-up">
         <h1 class="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
           Hubungi Kami <span class="animate-bounce text-3xl">💌</span>
@@ -107,8 +116,55 @@
       </div>
     </section>
 
-    <div class="h-24 md:h-32"></div>
+    <div class="h-6 md:h-16"></div>
   </main>
+
+  <main>
+
+
+  <!-- SECTION KONTAK -->
+<section class="py-6 px-6 bg-black bg-opacity-80 text-center">
+  <div class="max-w-md mx-auto" data-aos="fade-up" data-aos-duration="1200">
+   <div class="bg-gray-800 backdrop-blur-lg border border-gray-700 rounded-[2rem] shadow-lg p-10 text-center 
+            transform transition-all duration-500 ease-in-out hover:scale-105 hover:-rotate-1 hover:shadow-2xl">
+
+      <h2 class="text-3xl font-bold text-cyan-400 mb-4">Hubungi Kami</h2>
+      <p class="text-gray-300 mb-8 text-sm">
+        Terhubung dengan ByteBareng di berbagai platform sosial media dan email:
+      </p>
+
+      <div class="flex justify-center gap-6 mb-6">
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@bytebareng" target="_blank" class="hover:text-red-500 transition duration-300">
+          <i class="fab fa-youtube text-3xl"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/bytebareng.id" target="_blank" class="hover:text-pink-400 transition duration-300">
+          <i class="fab fa-instagram text-3xl"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@bytebareng.id" target="_blank" class="hover:text-white transition duration-300">
+          <i class="fab fa-tiktok text-3xl"></i>
+        </a>
+        <!-- Gmail -->
+        <a href="mailto:bytebareng.id@gmail.com" class="hover:text-green-400 transition duration-300">
+          <i class="fas fa-envelope text-3xl"></i>
+        </a>
+      </div>
+
+      <p class="text-sm text-gray-400">
+        📍 Email kami di:
+        <a href="mailto:bytebareng.id@gmail.com" class="underline text-cyan-400 hover:text-white">
+          bytebareng.id@gmail.com
+        </a>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<div class="h-24 md:h-32"></div>
+</main>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-center text-gray-400 py-6">
